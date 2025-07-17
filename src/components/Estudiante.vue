@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 button{
   border-radius: 5px;
@@ -76,7 +76,5 @@ button:active {
   background: rgb(41, 141, 111);
   transform: translateY(1px);
 }
-
-
 
 </style>

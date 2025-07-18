@@ -19,10 +19,14 @@ export default {
     },
     methods:{
         login(){
-            if(this.username === 'admin' && this.password === '123'){
-                localStorage.setItem('usuario', 'admin'); 
+            //Consulta atravez del cliente el password y el usuario
+            
+            if(this.username === 'admin' || this.username === 'estudiante' && this.password === '123'){
+                localStorage.setItem('usuario', this.username); 
                 localStorage.setItem('auth','true');//Bandera para decir que se autentico
                 //Redireccionar a la vista de estudiante
+                //Cada vez que vaya a una pagina(en todos los casos) se activan el guardian
+                //Es una redirrecion no una comunicacion entre componentes
                 this.$router.push('/home');  
             }
         }
